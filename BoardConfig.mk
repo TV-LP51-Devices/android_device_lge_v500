@@ -45,6 +45,12 @@ TARGET_KERNEL_SOURCE := kernel/lge/v500
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 lpj=67677 androidboot.hardware=awifi vmalloc=400M no_console_suspend
 TARGET_KERNEL_CONFIG := cyanogenmod_v500_defconfig
 
+# ROM toolchain
+TARGET_GCC_VERSION_EXP := 4.8
+
+# Custom Kernel Toolchain
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
